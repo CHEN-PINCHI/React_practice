@@ -1,0 +1,675 @@
+@charset "utf-8"
+@import 'reset.css'
+
+$mainColor: #ee8927
+$secondColor: #d85b45
+$textColor: #4d4d4d
+
+*
+  font-family: "Noto Sans TC", sans-serif !important
+  box-sizing: border-box
+
+.mainArea
+  background: #868686
+
+.wrap
+  width: 100%
+  margin: 0 auto
+
+.bannerArea
+  overflow: hidden
+
+  .wrap
+    padding: 0
+
+  .bannerBox
+    position: relative
+
+  .Img
+    width: 100%
+    height: 100%
+
+    img
+      display: block
+      width: 100%
+      height: 100%
+
+  .ImgBox
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+
+    .logo
+      position: absolute
+      bottom: 17.9%
+      right: 5.8%
+      width: 37.6%
+      height: auto
+      aspect-ratio: 540 / 323
+
+      .Img
+        animation: bomb 1s ease-in-out infinite alternate
+
+        @keyframes bomb
+          0%
+            transform: scale(1) rotate(-10deg)
+
+          100%
+            transform: scale(1.5) rotate(10deg)
+
+    .man
+      position: relative
+      width: auto
+      height: 100%
+      aspect-ratio: 1097 / 823
+
+      .Img
+        position: absolute
+        top: 0
+        left: 0
+
+      .eyes
+        position: relative
+        width: 100%
+        height: 100%
+
+        .leftEye
+          top: 37.2%
+          left: 52.9%
+          width: 4%
+          height: auto
+          aspect-ratio: 41 / 33
+
+        .rightEye
+          top: 36.6%
+          left: 66.4%
+          width: 3.7%
+          height: auto
+          aspect-ratio: 39 / 32
+
+.workArea
+  position: relative
+  z-index: 1
+  margin-top: -160px
+  padding: 0 40px 35px
+
+  @media ( max-width: 1440px )
+    margin-top: -100px
+    padding: 0 30px 25px
+
+  @media ( max-width: 1180px )
+    margin-top: 0
+    padding: 20px
+    padding-top: 0
+
+  @media ( max-width: 768px )
+    padding: 0
+    padding-bottom: 15px
+
+  .wrap
+    padding: 20px 30px 30px
+    background: #fff
+    border-radius: 10px
+
+    @media ( max-width: 480px )
+      padding: 15px
+
+  .workBox
+
+    .title
+      position: relative
+      padding: 15px 0
+      padding-left: 20px
+      font-size: 30px
+      font-weight: 700
+      letter-spacing: 1.5px
+      color: $textColor
+
+      @media ( max-width: 1440px )
+        padding: 10px 0
+        padding-left: 15px
+        font-size: 24px
+
+      @media ( max-width: 480px )
+        padding: 5px 0
+        padding-left: 10px
+        font-size: 20px
+
+      &::before
+        content: ''
+        position: absolute
+        top: 50%
+        left: 0
+        transform: translateY(-50%)
+        width: 6px
+        height: 20px
+        border-radius: 6px
+        background: $mainColor
+
+        @media ( max-width: 1440px )
+          width: 4px
+          height: 16px
+          border-radius: 4px
+
+  .filterBox
+    margin-top: 15px
+
+    @media ( max-width: 1180px )
+      display: none
+
+    .filterList
+      display: flex
+      align-items: center
+
+    .filterItem
+      position: relative
+      flex: 1
+
+      &.company
+        flex: 2.5
+
+      &.education, &.salary
+
+        &::after
+          content: ''
+          position: absolute
+          top: 50%
+          right: 25px
+          transform: translateY(-50%)
+          display: block
+          width: 0
+          height: 0
+          border-style: solid
+          border-width: 7px 6px 0 6px
+          border-color: #808080 transparent transparent transparent
+          pointer-events: none
+
+      &.search
+        flex: none
+        width: 140px
+
+        @media ( max-width: 1440px )
+          width: 100px
+
+        button
+          padding: 10px
+          width: 100%
+          height: 100%
+          border: none
+          border-radius: 6px
+          background: #999
+          font-size: 20px
+          letter-spacing: 1px
+          color: #fff
+          cursor: pointer
+          transition: all 0.4s ease-in-out
+
+          @media ( max-width: 1440px )
+            font-size: 16px
+
+          &:hover
+            background: $mainColor
+
+      &:not(:last-child)
+        margin-right: 25px
+
+      &.search, input[type="text"], select
+        height: 75px
+
+        @media ( max-width: 1440px )
+          height: 56px
+
+      label
+        position: absolute
+        z-index: 1
+        top: -5px
+        left: 15px
+        padding: 0 5px
+        display: inline-block
+        background: #fff
+        color: $textColor
+
+        @media ( max-width: 1440px )
+          font-size: 12px
+
+      input[type="text"], select
+        padding: 0 15px
+        padding-right: 45px
+        width: 100%
+        border: 1px solid #ccc
+        border-radius: 6px
+        font-size: 20px
+        letter-spacing: 1px
+        transition: all 0.4s ease-in-out
+        color: $textColor
+
+        @media ( max-width: 1440px )
+          font-size: 16px
+
+        &:hover
+          border-color: #000
+
+      input[type="text"]
+
+        &::placeholder
+          color: $textColor
+
+      select
+        cursor: pointer
+        appearance: none
+        -moz-appearance: none
+        -webkit-appearance: none
+
+  .workList
+    margin: 0 -15px
+    margin-top: 10px
+    display: flex
+    flex-wrap: wrap
+    min-height: 650px
+
+    @media ( max-width: 1440px )
+      margin: 10px -10px 0
+      min-height: 572px
+
+    @media ( max-width: 768px )
+      min-height: auto
+
+    @media ( max-width: 480px )
+      margin: 5px -8px 0
+
+    .workItem
+      padding: 15px
+      width: calc( 100% / 3 )
+
+      @media ( max-width: 1440px )
+        padding: 10px
+
+      @media ( max-width: 1180px )
+        width: 50%
+
+      @media ( max-width: 768px )
+        width: 100%
+
+      @media ( max-width: 480px )
+        padding: 8px
+
+      .item
+        padding: 25px 20px 0
+        border: 1px solid #ccc
+        border-radius: 10px
+        color: $textColor
+        transition: all 0.4s ease-in-out
+
+        @media ( max-width: 480px )
+          padding: 15px
+          padding-bottom: 0
+
+        &:hover
+          box-shadow: 0 0 8px rgb(#000, 0.35)
+
+        .companyName
+          font-size: 34px
+          font-weight: 700
+          letter-spacing: -2.5px
+
+          @media ( max-width: 1440px )
+            font-size: 24px
+            letter-spacing: 0
+
+          @media ( max-width: 480px )
+            font-size: 16px
+
+        .infoList
+          margin-top: 10px
+
+          .infoItem
+            display: flex
+            align-items: center
+            padding: 6px 0
+            font-size: 18px
+            letter-spacing: 1px
+            color: #808080
+
+            img
+              display: block
+              width: 22px
+              height: auto
+              aspect-ratio: 1 / 1
+
+              @media ( max-width: 1440px )
+                width: 18px
+
+            .info
+              padding-left: 10px
+
+              @media ( max-width: 1440px )
+                padding-left: 5px
+                font-size: 14px
+
+        .preview
+          margin-top: 8px
+          height: 48px
+          letter-spacing: 2.5px
+          line-height: 1.5
+          display: -webkit-box
+          -webkit-line-clamp: 2
+          -webkit-box-orient: vertical
+          overflow: hidden
+          text-overflow: ellipsis
+
+          @media ( max-width: 1440px )
+            height: 42px
+            font-size: 14px
+            letter-spacing: 1px
+
+        .description
+          padding: 10px 0 20px
+          margin-top: 10px
+          display: block
+          width: 100%
+          background: transparent
+          border: none
+          font-size: 18px
+          font-weight: 700
+          color: $mainColor
+          text-align: center
+          cursor: pointer
+          transition: all 0.4s ease-in-out
+
+          @media ( max-width: 1440px )
+            padding: 10px 0 15px
+            font-size: 14px
+
+          &:hover
+            color: $secondColor
+
+  .noData
+    margin-top: 25px
+    display: flex
+    align-items: center
+    justify-content: center
+    border: 1px solid #ccc
+    border-radius: 10px
+    width: 100%
+    min-height: 650px
+    font-size: 20px
+    text-align: center
+    color: #999
+
+  .modalArea
+    position: fixed
+    top: 0
+    left: 0
+    z-index: 1000
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 100%
+    height: 100%
+    background: rgb(#000, .7)
+    cursor: pointer
+    transition: all 0.3s ease-in-out
+    opacity: 0
+    pointer-events: none
+
+    &.current
+      opacity: 1
+      pointer-events: auto
+
+      .modalWrap
+        opacity: 1
+        transform: translateY(0)
+        transition-delay: .3s
+
+    .modalWrap
+      max-width: 980px
+      max-height: 760px
+      width: calc( 100% - 60px)
+      height: calc( 100% - 60px)
+      border-radius: 6px
+      background: #fff
+      cursor: default
+      transition: all .3s ease-in-out
+      opacity: 0
+      transform: translateY(50px)
+      overflow: hidden
+
+      @media ( max-width: 1440px )
+        max-width: 768px
+
+    .modalContent
+      height: 100%
+
+    .detailsInfo
+      padding: 20px 30px
+      display: flex
+      align-items: center
+      height: 80px
+      font-size: 30px
+      font-weight: 700
+      letter-spacing: 1px
+      color: $textColor
+      border-bottom: 1px solid #ccc
+
+      @media ( max-width: 1440px )
+        padding: 20px
+        height: 62px
+        font-size: 24px
+
+    .modalBox
+      padding: 30px
+      height: calc( 100% - 80px - 70px)
+      overflow-y: auto
+
+      @media ( max-width: 1440px )
+        padding: 20px
+        height: calc( 100% - 62px - 52px)
+
+      &::-webkit-scrollbar-track
+        -webkit-box-shadow: inset 0 0 3px rgba(#000, 0.15)
+        box-shadow: inset 0 0 3px rgba(#000, 0.15)
+        background-color: #dbdbdb
+
+      &::-webkit-scrollbar
+        width: 3px
+        height: 3px
+        background-color: #dbdbdb
+
+      &::-webkit-scrollbar-thumb
+        background: $mainColor
+
+      .modalTitleBox
+        display: flex
+        flex-wrap: wrap
+        align-items: flex-end
+        line-height: 1.3
+        letter-spacing: 2px
+        color: $textColor
+
+        .modalTitle
+          padding-right: 10px
+          font-size: 30px
+          font-weight: 700
+
+          @media ( max-width: 1440px )
+            font-size: 24px
+
+        .modalSubTitle
+          font-size: 28px
+          letter-spacing: -1px
+
+          @media ( max-width: 1440px )
+            font-size: 20px
+
+      .photoBox
+        overflow: hidden
+
+        .photoList
+          margin: 30px -10% 10px -5px
+
+          @media ( max-width: 640px )
+            margin: 20px -20% 10px -5px
+
+          .photoItem
+            padding: 0 5px
+
+            img
+              width: 100%
+              display: block
+
+        .dotsBox
+          display: flex
+          flex-wrap: wrap
+          justify-content: center
+          align-items: center
+          width: 100%
+
+          .dot
+            position: relative
+            width: 15px
+            height: 15px
+            cursor: pointer
+            transition: all 0.3s ease-in-out
+
+            &:hover
+
+              &::before
+                background: $mainColor
+
+            &.active
+              width: 33px
+
+              &::before
+                background: $mainColor
+
+            &::before
+              content: ''
+              position: absolute
+              top: 50%
+              left: 50%
+              transform: translate(-50%, -50%)
+              width: calc( 100% - 9px )
+              height: calc( 100% - 9px )
+              border-radius: 5px
+              background: #ccc
+              transition: all 0.3s ease-in-out
+
+      .descriptionBox
+        margin-top: 25px
+
+        .descriptionTitle
+          font-size: 24px
+          font-weight: 700
+          letter-spacing: 2px
+          color: #333
+
+          @media ( max-width: 1440px )
+            font-size: 20px
+
+        .description
+          padding-left: 10px
+          margin-top: 15px
+          font-size: 18px
+          line-height: 1.5
+          letter-spacing: 1px
+          color: #808080
+
+          @media ( max-width: 1440px )
+            font-size: 16px
+
+    .closeBtn
+      padding: 10px 20px
+      display: flex
+      align-items: center
+      justify-content: flex-end
+      width: 100%
+      height: 70px
+      background: transparent
+      border: none
+      border-top: 1px solid #ccc
+      cursor: pointer
+      font-size: 20px
+      letter-spacing: 1px
+      color: $textColor
+
+      @media ( max-width: 1440px )
+        height: 52px
+        font-size: 16px
+
+  .pageBox
+    display: flex
+    justify-content: center
+    align-items: center
+    gap: 7px
+
+    .pageBtn
+      padding: 5px
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 43px
+      height: auto
+      aspect-ratio: 1 / 1
+      background: transparent
+      border: none
+      border-radius: 100%
+      cursor: pointer
+      font-size: 18px
+      color: $textColor
+      transition: all 0.4s ease-in-out
+
+      @media ( max-width: 1440px )
+        width: 32px
+        font-size: 14px
+
+      &:hover:not(:disabled)
+        background: #ddd
+
+      &.active
+        background: #e6e6e6
+
+      &.arrow
+        position: relative
+
+        &::before
+          content: ''
+          position: absolute
+          top: 50%
+          left: 50%
+          width: 10px
+          height: auto
+          aspect-ratio: 1 / 1
+          border-top: 1px solid $textColor
+          border-right: 1px solid $textColor
+
+          @media ( max-width: 1440px )
+            width: 8px
+
+        &Prev
+
+          &::before
+            transform: translate(-40%, -50%) rotate(-135deg)
+
+        &Next
+
+          &::before
+            transform: translate(-60%, -50%) rotate(45deg)
+
+      &:disabled
+        opacity: 0.4
+        cursor: not-allowed
+
+  .workList, .noData, .pageBox
+    transition: all 0.3s ease-in-out
+    transform: translateY(0)
+    opacity: 1
+
+    &.fade-out
+      transform: translateY(20px)
+      opacity: 0
+
+    &.fade-in
+      transform: translateY(0)
+      opacity: 1
