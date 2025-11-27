@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/React_practice/static/css/main.0849c87a.css",
+    "main.js": "/React_practice/static/js/main.c49f796e.js",
+    "static/media/Banner-Character-01.png": "/React_practice/static/media/Banner-Character-01.bab832527825ba93f519.png",
+    "static/media/Banner-Background-01.png": "/React_practice/static/media/Banner-Background-01.60b0bb7028c5b05f470e.png",
+    "static/media/Banner-Logo-01.png": "/React_practice/static/media/Banner-Logo-01.202cfb06e6d2b3abfa59.png",
+    "static/media/Banner-Character-01-White.png": "/React_practice/static/media/Banner-Character-01-White.8aa6f017076ed79f88c9.png",
+    "static/media/slick.svg": "/React_practice/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/React_practice/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/React_practice/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/React_practice/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/React_practice/index.html",
+    "main.0849c87a.css.map": "/React_practice/static/css/main.0849c87a.css.map",
+    "main.c49f796e.js.map": "/React_practice/static/js/main.c49f796e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0849c87a.css",
+    "static/js/main.c49f796e.js"
+  ]
+}
